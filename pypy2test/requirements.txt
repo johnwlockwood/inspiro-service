@@ -1,0 +1,5 @@
+twisted==15.2.0
+cooperative==0.1.10
+MySQL-python==1.2.5
+alchimia==0.5
+SQLAlchemy==1.0.4
