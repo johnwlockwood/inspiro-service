@@ -1,0 +1,10 @@
+app:
+  extends:
+    file: common.yml
+    service: app
+  restart: no
+  volumes: 
+    - .:/usr/src/app
+  external_links:
+    - pypy2test_db_1:mysql
+ 

@@ -1,0 +1,19 @@
+dbdata:
+  image: ubuntu
+  volumes:
+    - /var/lib/mysql
+db:
+  image: mysql
+  volumes_from:
+    - dbdata
+  environment:
+    - MYSQL_DATABASE=mytestdb
+  env_file:
+    - .env
+app:
+  extends:
+    file: common.yml
+    service: app 
+  restart: no
+  links:
+    - db:mysql

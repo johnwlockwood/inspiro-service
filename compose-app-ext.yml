@@ -1,6 +1,0 @@
-blah:
- build: pypy2test
- restart: no
- external_links:
-  - pypydbtest_db_1:mysql
- 
