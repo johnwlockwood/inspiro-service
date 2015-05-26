@@ -10,4 +10,10 @@ db:
     - MYSQL_DATABASE=mytestdb
   env_file:
     - .env
- 
+app:
+  extends:
+    file: common.yml
+    service: app 
+  restart: no
+  links:
+    - db:mysql

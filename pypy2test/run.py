@@ -55,7 +55,7 @@ def add_main_fixture(reactor, db_engine):
         },
     ]
     d5 = defer.Deferred().addCallback(log.msg)
-    reactor.callLater(3.0, d5.callback,
+    reactor.callLater(0.5, d5.callback,
                       "########## simulated request 98 ############")
     yield d5
     ins = bogus_table.insert()
